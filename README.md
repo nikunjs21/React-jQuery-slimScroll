@@ -6,7 +6,7 @@ This library is made for React.js. It can be used by adding jQuery during initia
 
 ## Usage Example
 
-You can check the usage in `MessageDiv.jsx`:
+You can check the usage in `ScrollableDiv.jsx`:
 
 ```jsx
 import $ from "jquery";
