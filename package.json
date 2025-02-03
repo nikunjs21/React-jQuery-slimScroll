@@ -15,10 +15,10 @@
     "jquery-plugin",
     "ecosystem:jquery"
   ],
-  "homepage": "http://rocha.la/jQuery-slimScroll/",
+  "homepage": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rochal/jQuery-slimScroll.git"
+    "url": "https://github.com/nikunjs21/React-jQuery-slimScroll"
   },
   "author": {
     "name": "Piotr Rochala",
