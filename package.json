@@ -1,7 +1,7 @@
 {
   "name": "react-jquery-slimscroll",
   "main": "jquery.slimscroll.js",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "title": "jQuery slimScroll scrollbar",
   "description": "slimScroll is a small jQuery plugin that transforms any div into a scrollable area. slimScroll doesn't occupy any visual space as it only appears on a user initiated mouse-over.",
   "keywords": [
@@ -30,8 +30,8 @@
       "url": "https://github.com/nikunjs21"
     }
   ],
-  "dependencies": {
-    "jquery": "^3.7.1"
+  "scripts": {
+    "test": "jest"
   },
   "licenses": [
     {
@@ -42,5 +42,16 @@
       "type": "GPL",
       "url": "http://www.opensource.org/licenses/gpl-license.php"
     }
-  ]
+  ],
+  "presets": [
+    "@babel/preset-env"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.26.7",
+    "@babel/preset-env": "^7.26.7",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jquery": "^3.7.1"
+  }
 }

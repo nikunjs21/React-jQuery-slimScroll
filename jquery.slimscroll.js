@@ -6,8 +6,6 @@
  *
  */
 
-import $ from "jquery";
-
 function init($) {
 
   $.fn.extend({
@@ -477,7 +475,7 @@ function init($) {
 
 };
 
-export default function slimScroll() {
+export default function slimScroll($) {
   if (typeof $ === 'undefined') {
     console.error('jQuery is required for slimScroll to work');
     return;
