@@ -228,7 +228,7 @@ function init($) {
             var pageY = e.pageY;
 
             $doc.bind("mousemove.slimscroll", function(e){
-              currTop = t + e.pageY - pageY;
+              var currTop = t + e.pageY - pageY;
               bar.css('top', currTop);
               scrollContent(0, bar.position().top, false);// scroll content
             });
