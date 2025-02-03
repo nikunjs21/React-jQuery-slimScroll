@@ -12,33 +12,25 @@ You can check the usage in `MessageDiv.jsx`:
 import $ from "jquery";
 import SlimScroll from "react-jquery-slimscroll";
 import React, { useEffect } from 'react';
-import styled from 'styled-components';
 
-SlimScroll($);
+SlimScroll($); // initialize only once. (inside index.jsx or App.jsx preferred)
 
-const ScrollableDiv = styled.div`
-    font-size: 12px;
-    resize: vertical;
-    overflow: auto;
-    width: 100%;
-    border: 1px solid gray;
-    padding: 1rem;
-    height: 150px;
-`;
-
-const MessageDiv = ({ html }) => {
+const ScrollableDiv = ({ html }) => {
     useEffect(() => {
-        $(".scrollable-div").slimScroll();
+        $(".scrollable-div").slimScroll({
+            height: "50px",
+            size: "5px",
+        });
         return () => {
             $(".scrollable-div").slimScroll({ destroy: true });
         }
     });
     return (
-        <ScrollableDiv className="scrollable-div" dangerouslySetInnerHTML={{ __html: html }} />
+        <div className="scrollable-div" dangerouslySetInnerHTML={{ __html: html }} />
     )
 }
 
-export default MessageDiv;
+export default ScrollableDiv;
 ```
 
 Copyright (c) 2011 Piotr Rochala (http://rocha.la)
