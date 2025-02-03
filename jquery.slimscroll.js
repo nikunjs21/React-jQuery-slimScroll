@@ -5,7 +5,10 @@
  * Version: 1.3.8
  *
  */
-(function($) {
+
+import $ from "jquery";
+
+function init($) {
 
   $.fn.extend({
     slimScroll: function(options) {
@@ -472,4 +475,13 @@
     slimscroll: $.fn.slimScroll
   });
 
-})(jQuery);
+};
+
+export default function slimScroll() {
+  if (typeof $ === 'undefined') {
+    console.error('jQuery is required for slimScroll to work');
+    return;
+  }
+
+  init($);
+}
